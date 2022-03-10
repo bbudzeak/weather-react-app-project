@@ -6,7 +6,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Weather />
-        <div className="git-link">
+        <footer className="git-link">
           <span> Project coded by Bethany Budzeak, </span>
           <a
             href="https://github.com/bbudzeak/weather-react-app-project"
@@ -15,7 +15,7 @@ export default function App() {
           >
             open-sourced on GitHub
           </a>
-        </div>
+        </footer>
       </div>
     </div>
   );
