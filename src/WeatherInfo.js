@@ -1,0 +1,38 @@
+import React from "react";
+import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
+
+export default function WeatherInfo(props) {
+  return (
+    <div>
+      <h1>{props.data.city}</h1>
+      <ul>
+        <li>
+          <FormattedDate date={props.data.date} />
+        </li>
+        <li className="text-capitalize">{props.data.description}</li>
+      </ul>
+      <div className="row mt-1">
+        <div className="col-6">
+          <div className="clearfix">
+            <span className="float-start">
+              <WeatherIcon code={props.data.icon} />
+            </span>
+            <span className="float-start">
+              <span className="temperature">
+                {Math.round(props.data.temperature)}
+              </span>
+              <span className="unit">°C</span>
+            </span>
+          </div>
+        </div>
+        <div className="description col-6">
+          <ul>
+            <li>Humidity: {props.data.humidity}%</li>
+            <li>Wind: {props.data.wind} km/h</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}

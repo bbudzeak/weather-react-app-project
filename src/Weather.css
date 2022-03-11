@@ -30,11 +30,11 @@
   padding: -16px;
 }
 
-.Weather img {
-  margin-top: 10px;
-  margin-right: 10px;
-  height: 70px;
-  width: 70px;
+.Weather canvas {
+  margin-top: 25px;
+  margin-right: 20px;
+  height: 55px;
+  width: 55px;
 }
 
 .Weather .temperature {
