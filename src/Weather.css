@@ -1,7 +1,5 @@
 .Weather {
   padding: 20px;
-  border: 1px solid #dadde1;
-  border-radius: 5px;
 }
 
 .Weather form {
@@ -31,10 +29,8 @@
 }
 
 .Weather canvas {
-  margin-top: 25px;
-  margin-right: 20px;
-  height: 55px;
-  width: 55px;
+  margin-top: 20px;
+  display: inline;
 }
 
 .Weather .temperature {
@@ -42,6 +38,7 @@
   font-weight: bold;
   font-size: 64px;
   font-weight: 400;
+  margin-left: 20px;
 }
 
 .Weather .unit {
