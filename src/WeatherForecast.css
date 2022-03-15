@@ -1,9 +1,15 @@
 .WeatherForecast {
   text-align: center;
   display: inline;
+  margin-top: 20px;
+  color: rgb(88, 88, 88);
 }
 
 .WeatherMin {
   opacity: 0.6;
   margin-left: 5px;
+}
+
+.ForecastDay {
+  margin-bottom: -10px;
 }

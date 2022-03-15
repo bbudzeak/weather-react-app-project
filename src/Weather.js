@@ -25,7 +25,7 @@ export default function Weather() {
   }
 
   function search() {
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -43,7 +43,7 @@ export default function Weather() {
       <div className="Weather">
         <form onSubmit={handleSubmit} className="mb-4">
           <div className="row">
-            <div className="col-6">
+            <div className="col-9">
               <input
                 type="search"
                 placeholder="Type a city..."
@@ -52,22 +52,19 @@ export default function Weather() {
                 onChange={handleCityChange}
               />
             </div>
-            <div className="col-6">
+            <div className="col-3">
               <input
                 type="submit"
                 value="Search"
-                className="btn btn-primary w-40"
-              />
-              <input
-                type="button"
-                className="btn btn-primary w-40"
-                value="Search Current Location"
+                className="btn btn-primary w-60"
               />
             </div>
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-        <WeatherForecast coordinates={weatherData.coordinates} />
+        <div className="forecastSection">
+          <WeatherForecast coordinates={weatherData.coordinates} />
+        </div>
       </div>
     );
   } else {
